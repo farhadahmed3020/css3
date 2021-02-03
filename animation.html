@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        @keyframes sliding {
+            0%{
+               left: 0; 
+               top: 0;
+               background-color:yellow;
+            }
+            50%{
+                left: 400px;
+                top: 100px;
+                background-color:red;
+            }
+            100%{
+                left: 800px;
+                top: 0;
+            }
+        }
         .stage{
             background-color:lightcyan;
             height: 200px;
@@ -14,8 +30,11 @@
             width: 100px;
             height: 100px;
             border-radius: 50%;
-            background-color:brown;
+            background-color:yellow;
             position: absolute;
+        }
+        .stage:hover .ball{
+            animation: sliding 5s ease-in-out 1s infinite  alternate;
         }
     </style>
 </head>
